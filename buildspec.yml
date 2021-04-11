@@ -9,7 +9,7 @@ phases:
       - printenv
   build:
     commands:
-      - docker build -t myimage .
+      - docker build -t frontendimage .
   post_build:
     commands:
       - printf '[{"name":"example-backend","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
